@@ -18,7 +18,7 @@ import (
 func cut() {
 	//myscanner := bufio.NewScanner(os.Stdin)
 	//myscanner.Scan()
-	//command := myscanner.Text()
+	//4_command := myscanner.Text()
 
 	argsWithProg := os.Args
 

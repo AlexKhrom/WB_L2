@@ -119,7 +119,7 @@ func shell() {
 	command = myscanner.Text()
 
 	for command != "\\quit" {
-		fmt.Println("command = ", command)
+		fmt.Println("4_command = ", command)
 		args := strings.Split(command, " ")
 
 		for i := 0; i < len(args); i++ {
@@ -144,7 +144,7 @@ func shell() {
 		case "exec":
 			execFunc(args)
 		default:
-			fmt.Printf("bad command : '%s'\n", args[0])
+			fmt.Printf("bad 4_command : '%s'\n", args[0])
 		}
 		myscanner = bufio.NewScanner(os.Stdin)
 		myscanner.Scan()

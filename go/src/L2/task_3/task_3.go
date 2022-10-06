@@ -158,7 +158,7 @@ func mySort() {
 
 	//myscanner := bufio.NewScanner(os.Stdin)
 	//myscanner.Scan()
-	//command := myscanner.Text()
+	//4_command := myscanner.Text()
 
 	fileName, sortColumn, sortDigit, sortReverse, sortUniq := readCommand(strings.Join(argsWithProg[1:], " "))
 	if sortColumn != -1 {
