@@ -1,6 +1,8 @@
-package main
+package visitor
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //Шаблон «Посетитель» — это способ отделения алгоритма от структуры объекта, в которой он оперирует.
 //	Результат отделения — возможность добавлять новые операции в существующие структуры объектов без их
@@ -9,11 +11,11 @@ import "fmt"
 //наш метод. Получается , что метод вызывается путем передачи структуры метода в виде аргумента
 // GeometryVisitor - интерфейс - определяюзий методы у структуры-метода которую мы создаем
 
-type Geometry interface {
+type Geometry interface { // все фигуры должны удовлетворять этому интерфейсу, чтобы просто уметь вызывать методы
 	Visit(GeometryVisitor) (interface{}, error)
 }
 
-type GeometryVisitor interface {
+type GeometryVisitor interface { // все методы должны удовлетворять этому интерфейсу
 	VisitPoint(p *Point) (interface{}, error)
 	VisitLine(l *Line) (interface{}, error)
 	VisitCircle(c *Circle) (interface{}, error)

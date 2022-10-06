@@ -1,4 +1,4 @@
-package main
+package strategy
 
 import "fmt"
 
@@ -29,7 +29,7 @@ func (r *RoadStrategy) Router(startPoint, endPoint int) {
 	trafficJam := 2
 	total := endPoint - startPoint
 	totalTime := total / avgSpeed * trafficJam
-	fmt.Printf("a: %d, b : %d, avgSpeed: %d, trafficjam: %d, total: %d, totalTime:%d", startPoint, endPoint,
+	fmt.Printf("a: %d, b : %d, avgSpeed: %d, trafficjam: %d, total: %d, totalTime:%d\n", startPoint, endPoint,
 		avgSpeed, trafficJam, total, totalTime)
 }
 
